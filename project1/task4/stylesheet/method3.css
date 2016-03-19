@@ -1,0 +1,40 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%; }
+
+body {
+  display: table; }
+
+.wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+  .wrapper .rect {
+    background-color: #ccc;
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; }
+    .wrapper .rect .circle-left {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: #fc0;
+      position: absolute;
+      left: -50px;
+      top: -50px; }
+    .wrapper .rect .circle-right {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background-color: #fc0;
+      position: absolute;
+      right: -50px;
+      bottom: -50px; }
+
+/*# sourceMappingURL=method3.css.map */

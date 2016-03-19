@@ -1,0 +1,52 @@
+@mixin circle($radius)
+{
+	border-radius: 50%;
+	width: 2*$radius;
+	height: 2*$radius;
+	background-color: #fc0;
+}
+
+body,html{
+	padding: 0;
+	margin: 0;
+	// body{background:#039; border:10px solid #C00;}proven that html and body height!=100%
+	height: 100%;
+	width: 100%;
+}
+body{display: table;}
+.wrapper{
+	// center in vertical
+	display: table-cell;
+	vertical-align: middle;
+
+	// center in vertical with (1)
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	.rect{
+
+		background-color: #ccc;
+		width: 400px;
+		height: 200px;
+		// center in horizontal (1)
+		display: inline-block;
+
+
+		// as the parent of absolute child
+		position: relative;
+		overflow: hidden;
+		.circle-left{
+			@include circle(50px);
+			position: absolute;
+			left: -50px;
+			top: -50px;
+		}
+		.circle-right{
+			@include circle(50px);
+			position: absolute;
+			right: -50px;
+			bottom: -50px;
+
+		}
+	}
+}

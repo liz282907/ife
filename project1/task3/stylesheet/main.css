@@ -1,0 +1,50 @@
+body, ul {
+  margin: 0;
+  padding: 0; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .clearfix:after {
+    clear: both; }
+
+.container, .left-part, .main {
+  padding: 20px;
+  border: 1px solid #999; }
+
+.container {
+  background-color: #eee; }
+  .container .left-part {
+    background-color: #fff;
+    width: 200px;
+    box-sizing: border-box;
+    float: left;
+    display: table-cell;
+    vertical-align: middle; }
+    .container .left-part img {
+      width: 80px;
+      height: 80px;
+      float: left;
+      display: inline-block; }
+    .container .left-part .title {
+      font: 14px "Microsoft Yahei";
+      overflow: hidden; }
+  .container .right-part {
+    border: 1px solid #999;
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 120px;
+    float: right; }
+    .container .right-part .member-photos li {
+      display: block;
+      padding: 20px; }
+  .container .main {
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0 140px 0 220px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,73 @@
+$universal-border-style: 1px solid #999;
+@mixin universal-style($padding, $border) {
+    padding: $padding;
+    border: $border;
+}
+
+
+body,ul{
+    margin: 0;
+    padding: 0;
+}
+.clearfix{
+    // display: block;
+    &:before,&:after{
+        content:"";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after{
+        clear: both;
+
+        // overflow: hidden;
+        // visibility: hidden;
+    }
+    *zoom:1;
+
+}
+.container,.left-part,.main{
+    @include universal-style(20px, $universal-border-style);
+}
+.container {
+
+    background-color: #eee;
+
+    .left-part {
+        // @include universal-style(0px, $universal-border-style);
+        background-color: #fff;
+        width: 200px;
+        box-sizing: border-box;
+        float: left;
+        display: table-cell;
+        vertical-align: middle;
+        img{
+            width: 80px;
+            height: 80px;
+            float: left;
+            display: inline-block;
+        }
+        .title {
+            font: 14px "Microsoft Yahei";
+            overflow: hidden;
+            // display: inline-block;
+        }
+    }
+    .right-part {
+        border: 1px solid #999;
+        background-color: #fff;
+        box-sizing:border-box;
+        width: 120px;
+        float: right;
+        .member-photos li {
+            display: block;
+            padding: 20px;
+        }
+    }
+    .main {
+        // @include universal-style(20px, $universal-border-style);
+        background-color: #fff;
+        overflow: hidden;
+        margin: 0 140px 0 220px;
+    }
+}
