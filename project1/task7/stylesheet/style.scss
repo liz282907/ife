@@ -1,0 +1,276 @@
+@mixin font($size,$font-family,$color)
+{
+	font: $size $font-family;
+	color: $color;
+}
+
+
+body{
+	font: 14px "Microsoft Yahei";
+}
+.wrapper{
+	min-width: 1280px;
+	width: 100%;
+	border: 1px solid #d2d0d4;
+	margin: 0 auto;
+}
+.clearfix{
+	&:before,&:after {
+	content: "";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	}
+	&:after{
+		clear: both;
+	}
+	*zoom:1;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+
+
+/****header start***********************/
+
+
+.header{
+	margin: 0 59px;
+	height: 56px;
+	line-height: 56px;
+	h1{
+		font:1.5em/56px SimHei;
+		color:#393a3a;
+		padding-left: 46px;
+		background: url("../image/icons/logo.png") no-repeat left center;
+	}
+	.nav-links{
+		display: inline-block;
+		.nav-item
+		{
+			display: inline-block;
+			a{
+				color: #787b83;
+				padding: 0 20px;
+			}
+		}
+		.selected
+		{
+			border-bottom: 5px solid #e74f4d;
+			a{color: #e74f4d;}
+		}
+	}
+	.login{
+		display: inline-block;
+		background: url("../image/icons/login.png") no-repeat left center;
+		padding-left: 20px;
+		color: #e74f4d;
+	}
+
+}
+
+/****header end***********************/
+
+#home{
+	.banner{
+		height: 854px;
+		width: 100%;
+		border-bottom:1px solid #d2d0d4;
+		border-top: 1px solid #d2d0d4;
+		position: relative;
+		background: url("../image/backgrounds/home.jpg") no-repeat center center;
+		background-size: cover;
+		h2{
+			position: absolute;
+			top: 230px;
+			left: 116px;
+			font: 60px "Microsoft Yahei";
+			color: #fff;
+		}
+		h3{
+			position: absolute;
+			top: 310px;
+			left: 126px;
+			max-width: 300px;
+			font: 1.5em "Microsoft Yahei";
+			color: #fffdfd;
+		}
+		.start-experience
+		{
+			position: absolute;
+			top: 430px;
+			left: 110px;
+			padding: 0.5em 3.5em;
+			font: 30px "Microsoft Yahei";
+			color: #fff;
+			background-color: #e74f4d;
+		}
+	}
+	.benifit-item
+	{
+		float: left;
+		width: 25%;
+		box-sizing:border-box;
+		text-align: center;
+		position: relative;
+		margin-bottom: 66px;
+		img{
+			display: inline-block;
+			padding: 46px 0;
+		}
+		p{
+			padding-bottom: 24px;
+			max-width: 160px;
+			margin: 0 auto;
+			font: 14px "SimHei";
+			color: #767777;
+		}
+		.line
+		{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 2px;
+			height: 52px;
+			background-color: #c5c1bf;
+		}
+
+	}
+
+}
+
+
+#activities
+{
+	.activity-about
+	{
+		padding: 90px 0 80px;
+		text-align: center;
+		background-color: #ededec;
+		img{
+			display: inline-block;
+		}
+		p{
+			font:54px "SimHei";
+			color:#aba4a0;
+			margin-top: 50px;
+		}
+
+	}
+	.container{
+		width: 1030px;
+		margin: 0 auto;
+	}
+	.activity-search
+	{
+		background: url("../image/backgrounds/map.jpg") no-repeat center center;
+		background-size: cover;
+		height: 342px;
+		text-align: center;
+		position: relative;
+		h3{
+			padding-top:52px;
+			@include font(1.5em,"Microsoft Yahei",#fff);
+		}
+		.divider{
+			display: inline-block;
+			margin-top: 10px;
+			width: 30px;
+			height: 3px;
+			background-color: #fff;
+		}
+		p{
+			padding-top: 20px;
+			@include font(12px,"Microsoft Yahei",#fff);
+		}
+		.cover{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.address-selection{
+			padding-top: 52px;
+			display: flex;
+			// justify-content:space-between;
+			.selection-item{
+				flex:1;//equal the four part
+				line-height: 35px;
+
+
+				background-color: #fff;
+				position: relative;//becauseof the absolute position of the cover,the backgournd of the input is covered,so it should be lifted.
+			}
+			.selection-item+.selection-item{
+				margin-left: 28px;
+			}
+			.country,.province,.city{
+				border-right: 1px solid #e3d9d3;
+				border-left: 1px solid #e3d9d3;
+				box-sizing:border-box;
+				padding: 0 8px 0 12px;// gap between the input and the word
+
+			}
+			.submit{
+				background-color: #be4e48;
+				.search-btn{
+					@include font(1em,"Microsoft Yahei",#fff);
+				}
+			}
+			select{
+				width: 100%;
+				color: #a8aaaa;
+				@include font(12px,"Microsoft Yahei",#a8aaaa);
+				background: url("../image/icons/arrow2.png") no-repeat right center;
+			}
+
+			.dropdown{
+				position: absolute;//attention: because it's set to absolute,the width is as wide as the content
+				top: 35px;
+				left: 0;
+				width: 100%;
+				text-align: left;
+				background-color: #e3e3e4;
+				padding-bottom: 12px;
+
+				.dropdown-item{
+					display: block;
+					font: 12px/26px "Microsoft Yahei";
+					color:  #323333;
+				}
+				.down-arrow{
+					margin: 0 12px 0 8px;
+					// padding-left: 8px;
+					visibility:hidden;
+				}
+				.down-message{
+					margin-left: 12px;
+				}
+
+				// select one option
+				.select-down-item{
+					background-color: #be4e48;
+					color: white;
+					.down-arrow{
+						visibility:visible;
+					}
+
+				}
+
+			}
+
+			.focus{
+				border: 1px solid #be4e48;
+			}
+
+
+		}
+
+	}
+}

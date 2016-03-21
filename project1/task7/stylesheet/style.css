@@ -1,0 +1,199 @@
+body {
+  font: 14px "Microsoft Yahei"; }
+
+.wrapper {
+  min-width: 1280px;
+  width: 100%;
+  border: 1px solid #d2d0d4;
+  margin: 0 auto; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden; }
+  .clearfix:after {
+    clear: both; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/****header start***********************/
+.header {
+  margin: 0 59px;
+  height: 56px;
+  line-height: 56px; }
+  .header h1 {
+    font: 1.5em/56px SimHei;
+    color: #393a3a;
+    padding-left: 46px;
+    background: url("../image/icons/logo.png") no-repeat left center; }
+  .header .nav-links {
+    display: inline-block; }
+    .header .nav-links .nav-item {
+      display: inline-block; }
+      .header .nav-links .nav-item a {
+        color: #787b83;
+        padding: 0 20px; }
+    .header .nav-links .selected {
+      border-bottom: 5px solid #e74f4d; }
+      .header .nav-links .selected a {
+        color: #e74f4d; }
+  .header .login {
+    display: inline-block;
+    background: url("../image/icons/login.png") no-repeat left center;
+    padding-left: 20px;
+    color: #e74f4d; }
+
+/****header end***********************/
+#home .banner {
+  height: 854px;
+  width: 100%;
+  border-bottom: 1px solid #d2d0d4;
+  border-top: 1px solid #d2d0d4;
+  position: relative;
+  background: url("../image/backgrounds/home.jpg") no-repeat center center;
+  background-size: cover; }
+  #home .banner h2 {
+    position: absolute;
+    top: 230px;
+    left: 116px;
+    font: 60px "Microsoft Yahei";
+    color: #fff; }
+  #home .banner h3 {
+    position: absolute;
+    top: 310px;
+    left: 126px;
+    max-width: 300px;
+    font: 1.5em "Microsoft Yahei";
+    color: #fffdfd; }
+  #home .banner .start-experience {
+    position: absolute;
+    top: 430px;
+    left: 110px;
+    padding: 0.5em 3.5em;
+    font: 30px "Microsoft Yahei";
+    color: #fff;
+    background-color: #e74f4d; }
+#home .benifit-item {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  margin-bottom: 66px; }
+  #home .benifit-item img {
+    display: inline-block;
+    padding: 46px 0; }
+  #home .benifit-item p {
+    padding-bottom: 24px;
+    max-width: 160px;
+    margin: 0 auto;
+    font: 14px "SimHei";
+    color: #767777; }
+  #home .benifit-item .line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 52px;
+    background-color: #c5c1bf; }
+
+#activities .activity-about {
+  padding: 90px 0 80px;
+  text-align: center;
+  background-color: #ededec; }
+  #activities .activity-about img {
+    display: inline-block; }
+  #activities .activity-about p {
+    font: 54px "SimHei";
+    color: #aba4a0;
+    margin-top: 50px; }
+#activities .container {
+  width: 1030px;
+  margin: 0 auto; }
+#activities .activity-search {
+  background: url("../image/backgrounds/map.jpg") no-repeat center center;
+  background-size: cover;
+  height: 342px;
+  text-align: center;
+  position: relative; }
+  #activities .activity-search h3 {
+    padding-top: 52px;
+    font: 1.5em "Microsoft Yahei";
+    color: #fff; }
+  #activities .activity-search .divider {
+    display: inline-block;
+    margin-top: 10px;
+    width: 30px;
+    height: 3px;
+    background-color: #fff; }
+  #activities .activity-search p {
+    padding-top: 20px;
+    font: 12px "Microsoft Yahei";
+    color: #fff; }
+  #activities .activity-search .cover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #activities .activity-search .address-selection {
+    padding-top: 52px;
+    display: flex; }
+    #activities .activity-search .address-selection .selection-item {
+      flex: 1;
+      line-height: 35px;
+      background-color: #fff;
+      position: relative; }
+    #activities .activity-search .address-selection .selection-item + .selection-item {
+      margin-left: 28px; }
+    #activities .activity-search .address-selection .country, #activities .activity-search .address-selection .province, #activities .activity-search .address-selection .city {
+      border-right: 1px solid #e3d9d3;
+      border-left: 1px solid #e3d9d3;
+      box-sizing: border-box;
+      padding: 0 8px 0 12px; }
+    #activities .activity-search .address-selection .submit {
+      background-color: #be4e48; }
+      #activities .activity-search .address-selection .submit .search-btn {
+        font: 1em "Microsoft Yahei";
+        color: #fff; }
+    #activities .activity-search .address-selection select {
+      width: 100%;
+      color: #a8aaaa;
+      font: 12px "Microsoft Yahei";
+      color: #a8aaaa;
+      background: url("../image/icons/arrow2.png") no-repeat right center; }
+    #activities .activity-search .address-selection .dropdown {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 100%;
+      text-align: left;
+      background-color: #e3e3e4;
+      padding-bottom: 12px; }
+      #activities .activity-search .address-selection .dropdown .dropdown-item {
+        display: block;
+        font: 12px/26px "Microsoft Yahei";
+        color: #323333; }
+      #activities .activity-search .address-selection .dropdown .down-arrow {
+        margin: 0 12px 0 8px;
+        visibility: hidden; }
+      #activities .activity-search .address-selection .dropdown .down-message {
+        margin-left: 12px; }
+      #activities .activity-search .address-selection .dropdown .select-down-item {
+        background-color: #be4e48;
+        color: white; }
+        #activities .activity-search .address-selection .dropdown .select-down-item .down-arrow {
+          visibility: visible; }
+    #activities .activity-search .address-selection .focus {
+      border: 1px solid #be4e48; }
+
+/*# sourceMappingURL=style.css.map */

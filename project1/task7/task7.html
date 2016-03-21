@@ -1,10 +1,179 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>task7</title>
-	<meta charset="utf-8"/>
-</head>
-<body>
 
+<head>
+    <title>task7</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheet/reset.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header clearfix">
+            <h1 class="left">新世界</h1>
+            <nav class="right">
+                <ul class="nav-links">
+                    <li class="nav-item selected"><a href="#home">首页</a></li>
+                    <li class="nav-item"><a href="#activities">最新活动</a></li>
+                    <li class="nav-item"><a href="#description">项目介绍</a></li>
+                    <li class="nav-item"><a href="#community">爱心社区</a></li>
+                    <li class="nav-item"><a href="#about-us">关于我们</a></li>
+                </ul>
+                <a href="javascript:void(0)" class="login">登录</a>
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div class="banner">
+                    <h2>Time of new life</h2>
+                    <h3>新时代，年轻的人们然我们一起体验新生活，享受新生活</h3>
+                    <a href="javascript:void(0)" class="start-experience">开始体验</a>
+                </div>
+                <div class="benifits clearfix">
+                    <div class="benifit-item">
+                        <img src="image/icons/info1.png" alt="打造世界观" />
+                        <p>打造全新世界观，让你更爱你的生活</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="benifit-item">
+                        <img src="image/icons/info2.png" alt="参加公益活动" />
+                        <p>丰富多彩的工艺活动，发挥新世界的主人公意识</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="benifit-item">
+                        <img src="image/icons/info3.png" alt="新理念" />
+                        <p>时尚的新理念，超前体验 未知的生活</p>
+                        <div class="line"></div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="benifit-item">
+                        <img src="image/icons/info4.png" alt="培养机制" />
+                        <p>完善的培养机制，培养你 全新的世界观</p>
+                    </div>
+                </div>
+            </section>
+            <section id="activities">
+                <div class="activity-about">
+                    <img src="image/icons/logo_big.png" alt="logo">
+                    <p>关于新世界，你不知道的还有什么？</p>
+                </div>
+                <div class="activity-search">
+                    <div class="container">
+                        <div class="cover"></div>
+                        <h3>查找新世界城市活动信息</h3>
+                        <div class="divider"></div>
+                        <p>每个城市都有不同的活动信息，请自助查询您所需要了解的城市</p>
+                        <div class="address-selection">
+                            <div class="country selection-item">
+                                <select name="country">
+                                    <option value="中国">中国</option>
+                                </select>
+                            </div>
+                            <div class="province selection-item focus">
+                                <select name="province">
+                                	<option value="" disabled selected>省份</option>
+                                    <option value="北京市">北京市</option>
+                                    <option value="天津市">天津市</option>
+                                    <option value="河北省">河北省</option>
+                                    <option value="陕西省">陕西省</option>
+                                    <option value="内蒙古自治区">内蒙古自治区</option>
+                                    <option value="辽宁省">辽宁省</option>
+                                </select>
+                            	<ul class="dropdown focus">
+                            		<li class="dropdown-item select-down-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />北京市</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />天津市</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />河北省</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />陕西省</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />内蒙古自治区</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />辽宁省</li>
+                            	</ul>
+
+                            </div>
+                            <div class="city selection-item">
+                                <select placeholder="城市" name="city">
+                                <option value="" disabled selected>城市</option>
+                                </select>
+                            </div>
+                            <div class="selection-item submit">
+                                <input type="submit" value="搜   索"  class="search-btn"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    			<div class="activity-gallery"></div>
+    		</section>
+		    <section id="description">
+			    <div id="new-world">
+			    </div>
+			    <div id="new-times">
+			        <div class="new-times-item">
+			            <h3>新时代关于爱生活的我们</h3>
+			            <hr>
+			            <a href="javascript:void(0)">查看更多</a>
+			        </div>
+			        <div class="new-times-item">
+			            <h3>新时代关于爱生活的我们</h3>
+			            <hr>
+			            <a href="javascript:void(0)">查看更多</a>
+			        </div>
+			        <div class="new-times-item">
+			            <img src="" alt="新时代的我们" />
+			        </div>
+			    </div>
+		    </section>
+			<section id="community">
+			    <div class="volunteer-header">
+			        <h3>成为我们的志愿者</h3>
+			        <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+			    </div>
+			    <div class="volunteer-body">
+			        <div class="declarations left-part">
+			            <div class="priciples">
+			                <h3>新世界志愿者协议</h3>
+			                <p>加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......</p>
+			                <a href="javascript:void(0)">more</a>
+			            </div>
+			            <div class="rights">
+			                <h3>新世界志愿者权利</h3>
+			                <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在新世界活动的优先参与资格</p>
+			                <a href="javascript:void(0)">more</a>
+			            </div>
+			            <div class="more">
+			                <a href="javascript:void(0)">more</a>
+			            </div>
+			        </div>
+			        <div class="applications right-part">
+			            <form>
+			                <input type="text" placeholder="姓名：" / name="name">
+			                <input type="number" placeholder="年龄：" />
+			                <input type="tel" placeholder="联系电话：" / name="age">
+			                <input type="text" placeholder="联系地址：" / name="address">
+			                <textarea cols="">
+			                </textarea>
+			                <input type="submit" value="提交申请" />
+			            </form>
+			        </div>
+			    </div>
+			</section>
+    	</main>
+	    <footer>
+	        <section id="about-us">
+	            <h3>联系我们</h3>
+	            <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯 也可以通过以下任何方式关注我们动态</p>
+	            <div>
+	                <input type="email" placeholder="someone@email.com" name="email" />
+	                <input type="submit" value="提交" />
+	            </div>
+	            <div class="share-links">
+	            </div>
+	        </section>
+	        <section>
+	            <span>@2016新世界</span>
+	            <a href="">Back to top</a>
+	        </section>
+	    </footer>
+    </div>
 </body>
+
 </html>
