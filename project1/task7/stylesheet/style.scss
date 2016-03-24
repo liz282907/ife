@@ -15,6 +15,7 @@
 
 body{
 	font: 14px "Microsoft Yahei";
+	background-color: #fff;
 }
 .wrapper{
 	min-width: 1280px;
@@ -47,7 +48,7 @@ body{
 
 
 .header{
-	margin: 0 59px;
+	padding: 0 59px;
 	height: 56px;
 	line-height: 56px;
 	h1{
@@ -126,6 +127,7 @@ body{
 		text-align: center;
 		position: relative;
 		margin-bottom: 66px;
+		background-color: #fff;
 		img{
 			display: inline-block;
 			padding: 46px 0;
@@ -501,6 +503,7 @@ body{
 		}
 		.new-times-item:nth-child(2){
 			position: relative;
+			background-color: #fff;
 			a{
 				color:#000;
 				border: 1px solid #e74f4d;
@@ -534,6 +537,7 @@ body{
 
 #community{
 	padding-top: 120px;
+	background-color: #fff;
 	.volunteer-header{
 		text-align: center;
 		h3{
@@ -597,6 +601,7 @@ body{
 					min-width: 35%;//to make sure that only two in one row
 
 					font: 12px/40px SimSun;
+					height: 40px;
 					background-color: #ededee;
 
 				}
@@ -649,6 +654,7 @@ body{
 				font: 14px "Microsoft Yahei";
 				padding-left: 10px;
 				color: #aaa;
+				background-color: #fff;
 			}
 			input[type="submit"]{
 				padding-left: 8px;
