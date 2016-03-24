@@ -3,6 +3,14 @@
 	font: $size $font-family;
 	color: $color;
 }
+@mixin short-divider($width,$height,$margin-top,$background-color) {
+	width: $width;
+	height: $height;
+	margin-top: $margin-top;
+	display: inline-block;
+	background-color: $background-color;
+
+}
 
 
 body{
@@ -146,6 +154,7 @@ body{
 
 #activities
 {
+	width: 100%;
 	.activity-about
 	{
 		padding: 90px 0 80px;
@@ -272,5 +281,405 @@ body{
 
 		}
 
+	}
+	.activity-gallery{
+
+		height: 604px;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		background-color: #f7f7f7;
+		.gallery-container{
+			width: 986px;
+			height: 390px;
+			display: flex;
+			.gallery-item{
+				flex:1;
+				box-sizing:border-box;
+			}
+			.gallery-item+.gallery-item{
+				margin-left: 36px;
+			}
+		}
+		//contents in each item
+		.gallery-item{
+			font: 12px/21px SimSun;
+			color: #231815;
+			img{
+				background-color: #fff;
+				border: 1px solid #e1dedc;
+				border-bottom: none;
+				padding: 12px 8px;
+			}
+			h2{
+				font-weight:bold;
+				padding-top: 5px;
+			}
+			h3{
+				color: #b5aeab;
+				font-weight: normal;
+				padding-top: 2px;
+			}
+		}
+		.highlight{
+			h2{
+				font-size: 19px;
+				margin-right: -2em;
+				//or padding-left:3em ok too
+				letter-spacing: 2em;
+				padding-top: 0;
+			}
+		}
+
+
+
+
+	}
+
+
+}
+
+
+
+#description{
+	// new-world:fixed left,responsible right
+	// max-width: 1280px;
+	margin: 0 auto;
+
+	@mixin triangle($top-width,$right-width) {
+			content:"";
+			position: absolute;
+			top: 50%;
+			transform:translateY(-50%);
+			right: 0;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-color: transparent #fff transparent transparent;
+			border-width:$top-width $right-width;
+		}
+
+	#new-world{
+		width: 100%;
+		overflow: hidden;
+		text-align: center;
+		// .poster,.details{
+		// 	padding-bottom: 9999px;
+		// 	margin-bottom: -9999px;
+		// }
+
+
+
+
+		.poster{
+			position: relative;      //it's set for the after pseudo element to position
+			float: left;
+			width: 66.6%;
+			height: 567px;
+			color: #fff;
+
+
+			background: url("../image/backgrounds/new_world.jpg") no-repeat center center;
+			background-size: cover;
+			.theme{
+				padding-top: 132px;
+				font:50px/76px "Microsoft Yahei";
+			}
+			p{
+				font:bold 158px "Microsoft Yahei";
+				margin-bottom: 38px;
+			}
+			.time{
+				display: block;
+				margin-top: 24px;
+			}
+
+		}
+		.poster:after{
+			@include triangle(15px,25px);
+			top: 50%;
+			// right: 0;
+
+		}
+
+
+
+
+
+		//right-part
+		.details{
+			height: 567px;
+
+			background-color: #fff;
+			overflow: hidden;
+			display: flex;
+			justify-content:center;
+			align-items:center;
+
+			 // position: relative;
+		}
+		.details-content{
+			width: 288px;
+			height: 272px;
+			text-align: center;
+			h2{
+				font: bold 16px "Microsoft Yahei";
+			}
+			span{color: red;}
+			p{
+				text-align: left;
+				margin-top: 17px;
+				line-height: 30px;
+			}
+			.more-detail{
+				display: inline-block;
+				margin-top: 36px;
+				border: 1px solid #e46868;
+				font: bold 14px "Microsoft Yahei";
+				padding: 9px 28px;
+				color: #e46868;
+			}
+			.detail-banner-btn{
+				margin-top: 24px;
+				margin-left: -14px;
+				.circle{
+					width: 12px;
+					height: 12px;
+					border: 1px solid #929292;
+					border-radius: 50%;
+					display: inline-block;
+					margin-left: 14px;
+				}
+				.current{
+					background-color: #929292;
+				}
+			}
+		}
+	}
+	#new-times{
+		height: 522px;
+		text-align: center;
+
+		.new-times-item{
+			float: left;
+			width: 33.3%;
+			height: 100%;
+
+			display: flex;
+			justify-content:center;
+			align-items:center;
+
+			h3{
+				font:21px/30px SimHei;
+			}
+
+
+		}
+
+		.more-btn{
+			width: 100%;
+
+			line-height: 40px;
+			display: block;
+			margin-top: 41px;
+			cursor: pointer;
+		}
+
+
+		.new-times-item:nth-child(1){
+			background-color: #e74f4d;
+			color:#fff;
+			a{
+				color:#fff;
+				border: 1px solid #fff;
+			}
+			.short-divider{
+				@include short-divider(30px,2px,20px,#fff);
+			}
+		}
+		.new-times-item:nth-child(2){
+			position: relative;
+			a{
+				color:#000;
+				border: 1px solid #e74f4d;
+			}
+			.short-divider{
+				@include short-divider(30px,2px,20px,#abaaaa);
+			}
+			&:after{
+				@include triangle(15px,25px);
+				border-color: transparent transparent transparent #fff;
+				z-index: 999;
+
+				right: -50px;
+				//can also use transform:translateX(100%),rotate(180deg)
+
+			}
+		}
+
+
+		.new-times-item:nth-child(3){
+			background: url(../image/backgrounds/us.jpg) no-repeat center center;
+			background-size: cover;
+		}
+
+
+		.item-wrapper{
+			width: 170px;
+		}
+	}
+}
+
+#community{
+	padding-top: 120px;
+	.volunteer-header{
+		text-align: center;
+		h3{
+			font: 21px SimHei;
+		}
+		.short-divider{
+			@include short-divider(30px,2px,8px,#ea695f);;
+		}
+		p{
+			padding-top: 16px;
+			color:#aaa;
+			font-size: 12px;
+		}
+
+	}
+	.volunteer-body{
+		width: 1000px;
+		margin: 106px auto 166px;
+		.declarations{
+			width:35%;
+			padding-right:70px;
+			box-sizing:border-box;
+		}
+		.declaration-item{
+			font:12px/21px SimHei;
+			color:rgba(0,0,0,0.6);
+			margin-bottom: 8px;
+			// float: left;
+			// width: 100%;         //attention!
+			h3{
+				font:14px SimHei;
+				margin-bottom: 26px;
+				color:rgba(0,0,0,0.8);
+			}
+			p{
+
+				vertical-align: top;
+			}
+			.declaration-more{
+				float: right;
+				color:rgba(0,0,0,0.6);
+				&:before{
+					content:url(../image/icons/more.png);
+					margin-right: 8px;
+				}
+			}
+		}
+		.applications{
+			width: 65%;
+			.application-form{
+				display: flex;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				// align-content:space-between;
+				margin-right: -18px;
+				.input-box{
+					flex:1;
+					margin-right: 18px;
+					margin-bottom: 14px;
+					padding-left: 16px;
+					min-width: 35%;//to make sure that only two in one row
+
+					font: 12px/40px SimSun;
+					background-color: #ededee;
+
+				}
+				.text-area{
+					display: block;
+					flex-basis:100%;
+					height:120px;
+					padding-left:16px;
+					background-color: #ededee;
+					opacity:0.8;
+				}
+				.submit-application{
+					display: block;
+				}
+
+			}
+
+		}
+	}
+
+}
+
+#about-us{
+	background-color: #32353e;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	width: 100%;
+	height: 360px;
+	.about-container{
+		width: 510px;
+		height: 200px;
+		text-align: center;
+		color: #fff;
+		h3{
+			font: 21px SimHei;
+		}
+		p{
+			margin-top: 6px;
+			max-width: 480px;
+			font: 12px/18px SimSun;
+		}
+		.email-box{
+			margin-top: 24px;
+			display: flex;
+			height: 40px;
+			line-height: 40px;
+			input[type="email"]{
+				flex:1;
+				font: 14px "Microsoft Yahei";
+				padding-left: 10px;
+				color: #aaa;
+			}
+			input[type="submit"]{
+				padding-left: 8px;
+				width: 80px;
+				text-align: center;
+				background-color: #686166;
+				color: #fff;
+				letter-spacing: 8px;
+			}
+		}
+		.share-links{
+			padding-top: 36px;
+			margin-left: -30px;
+			text-align: center;
+			display: inline-block;
+			img{
+				float: left;
+				margin-left: 30px;
+				display: inline-block;
+			}
+		}
+	}
+}
+#copyright{
+	line-height: 60px;
+	height: 60px;
+	padding-left: 100px;
+	padding-right: 40px;
+	background-color:#2f3038;
+	color: #fff;
+	a{
+		color: #fff;
 	}
 }

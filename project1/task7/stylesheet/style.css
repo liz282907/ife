@@ -105,95 +105,387 @@ body {
     height: 52px;
     background-color: #c5c1bf; }
 
-#activities .activity-about {
-  padding: 90px 0 80px;
-  text-align: center;
-  background-color: #ededec; }
-  #activities .activity-about img {
-    display: inline-block; }
-  #activities .activity-about p {
-    font: 54px "SimHei";
-    color: #aba4a0;
-    margin-top: 50px; }
-#activities .container {
-  width: 1030px;
-  margin: 0 auto; }
-#activities .activity-search {
-  background: url("../image/backgrounds/map.jpg") no-repeat center center;
-  background-size: cover;
-  height: 342px;
-  text-align: center;
-  position: relative; }
-  #activities .activity-search h3 {
-    padding-top: 52px;
-    font: 1.5em "Microsoft Yahei";
-    color: #fff; }
-  #activities .activity-search .divider {
-    display: inline-block;
-    margin-top: 10px;
-    width: 30px;
-    height: 3px;
-    background-color: #fff; }
-  #activities .activity-search p {
-    padding-top: 20px;
-    font: 12px "Microsoft Yahei";
-    color: #fff; }
-  #activities .activity-search .cover {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 0;
-    left: 0; }
-  #activities .activity-search .address-selection {
-    padding-top: 52px;
-    display: flex; }
-    #activities .activity-search .address-selection .selection-item {
-      flex: 1;
-      line-height: 35px;
-      background-color: #fff;
-      position: relative; }
-    #activities .activity-search .address-selection .selection-item + .selection-item {
-      margin-left: 28px; }
-    #activities .activity-search .address-selection .country, #activities .activity-search .address-selection .province, #activities .activity-search .address-selection .city {
-      border-right: 1px solid #e3d9d3;
-      border-left: 1px solid #e3d9d3;
-      box-sizing: border-box;
-      padding: 0 8px 0 12px; }
-    #activities .activity-search .address-selection .submit {
-      background-color: #be4e48; }
-      #activities .activity-search .address-selection .submit .search-btn {
-        font: 1em "Microsoft Yahei";
-        color: #fff; }
-    #activities .activity-search .address-selection select {
-      width: 100%;
-      color: #a8aaaa;
+#activities {
+  width: 100%; }
+  #activities .activity-about {
+    padding: 90px 0 80px;
+    text-align: center;
+    background-color: #ededec; }
+    #activities .activity-about img {
+      display: inline-block; }
+    #activities .activity-about p {
+      font: 54px "SimHei";
+      color: #aba4a0;
+      margin-top: 50px; }
+  #activities .container {
+    width: 1030px;
+    margin: 0 auto; }
+  #activities .activity-search {
+    background: url("../image/backgrounds/map.jpg") no-repeat center center;
+    background-size: cover;
+    height: 342px;
+    text-align: center;
+    position: relative; }
+    #activities .activity-search h3 {
+      padding-top: 52px;
+      font: 1.5em "Microsoft Yahei";
+      color: #fff; }
+    #activities .activity-search .divider {
+      display: inline-block;
+      margin-top: 10px;
+      width: 30px;
+      height: 3px;
+      background-color: #fff; }
+    #activities .activity-search p {
+      padding-top: 20px;
       font: 12px "Microsoft Yahei";
-      color: #a8aaaa;
-      background: url("../image/icons/arrow2.png") no-repeat right center; }
-    #activities .activity-search .address-selection .dropdown {
-      position: absolute;
-      top: 35px;
-      left: 0;
+      color: #fff; }
+    #activities .activity-search .cover {
       width: 100%;
-      text-align: left;
-      background-color: #e3e3e4;
-      padding-bottom: 12px; }
-      #activities .activity-search .address-selection .dropdown .dropdown-item {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #activities .activity-search .address-selection {
+      padding-top: 52px;
+      display: flex; }
+      #activities .activity-search .address-selection .selection-item {
+        flex: 1;
+        line-height: 35px;
+        background-color: #fff;
+        position: relative; }
+      #activities .activity-search .address-selection .selection-item + .selection-item {
+        margin-left: 28px; }
+      #activities .activity-search .address-selection .country, #activities .activity-search .address-selection .province, #activities .activity-search .address-selection .city {
+        border-right: 1px solid #e3d9d3;
+        border-left: 1px solid #e3d9d3;
+        box-sizing: border-box;
+        padding: 0 8px 0 12px; }
+      #activities .activity-search .address-selection .submit {
+        background-color: #be4e48; }
+        #activities .activity-search .address-selection .submit .search-btn {
+          font: 1em "Microsoft Yahei";
+          color: #fff; }
+      #activities .activity-search .address-selection select {
+        width: 100%;
+        color: #a8aaaa;
+        font: 12px "Microsoft Yahei";
+        color: #a8aaaa;
+        background: url("../image/icons/arrow2.png") no-repeat right center; }
+      #activities .activity-search .address-selection .dropdown {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        width: 100%;
+        text-align: left;
+        background-color: #e3e3e4;
+        padding-bottom: 12px; }
+        #activities .activity-search .address-selection .dropdown .dropdown-item {
+          display: block;
+          font: 12px/26px "Microsoft Yahei";
+          color: #323333; }
+        #activities .activity-search .address-selection .dropdown .down-arrow {
+          margin: 0 12px 0 8px;
+          visibility: hidden; }
+        #activities .activity-search .address-selection .dropdown .down-message {
+          margin-left: 12px; }
+        #activities .activity-search .address-selection .dropdown .select-down-item {
+          background-color: #be4e48;
+          color: white; }
+          #activities .activity-search .address-selection .dropdown .select-down-item .down-arrow {
+            visibility: visible; }
+      #activities .activity-search .address-selection .focus {
+        border: 1px solid #be4e48; }
+  #activities .activity-gallery {
+    height: 604px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; }
+    #activities .activity-gallery .gallery-container {
+      width: 986px;
+      height: 390px;
+      display: flex; }
+      #activities .activity-gallery .gallery-container .gallery-item {
+        flex: 1;
+        box-sizing: border-box; }
+      #activities .activity-gallery .gallery-container .gallery-item + .gallery-item {
+        margin-left: 36px; }
+    #activities .activity-gallery .gallery-item {
+      font: 12px/21px SimSun;
+      color: #231815; }
+      #activities .activity-gallery .gallery-item img {
+        background-color: #fff;
+        border: 1px solid #e1dedc;
+        border-bottom: none;
+        padding: 12px 8px; }
+      #activities .activity-gallery .gallery-item h2 {
+        font-weight: bold;
+        padding-top: 5px; }
+      #activities .activity-gallery .gallery-item h3 {
+        color: #b5aeab;
+        font-weight: normal;
+        padding-top: 2px; }
+    #activities .activity-gallery .highlight h2 {
+      font-size: 19px;
+      margin-right: -2em;
+      letter-spacing: 2em;
+      padding-top: 0; }
+
+#description {
+  margin: 0 auto; }
+  #description #new-world {
+    width: 100%;
+    overflow: hidden;
+    text-align: center; }
+    #description #new-world .poster {
+      position: relative;
+      float: left;
+      width: 66.6%;
+      height: 567px;
+      color: #fff;
+      background: url("../image/backgrounds/new_world.jpg") no-repeat center center;
+      background-size: cover; }
+      #description #new-world .poster .theme {
+        padding-top: 132px;
+        font: 50px/76px "Microsoft Yahei"; }
+      #description #new-world .poster p {
+        font: bold 158px "Microsoft Yahei";
+        margin-bottom: 38px; }
+      #description #new-world .poster .time {
         display: block;
-        font: 12px/26px "Microsoft Yahei";
-        color: #323333; }
-      #activities .activity-search .address-selection .dropdown .down-arrow {
-        margin: 0 12px 0 8px;
-        visibility: hidden; }
-      #activities .activity-search .address-selection .dropdown .down-message {
-        margin-left: 12px; }
-      #activities .activity-search .address-selection .dropdown .select-down-item {
-        background-color: #be4e48;
-        color: white; }
-        #activities .activity-search .address-selection .dropdown .select-down-item .down-arrow {
-          visibility: visible; }
-    #activities .activity-search .address-selection .focus {
-      border: 1px solid #be4e48; }
+        margin-top: 24px; }
+    #description #new-world .poster:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+      border-width: 15px 25px;
+      top: 50%; }
+    #description #new-world .details {
+      height: 567px;
+      background-color: #fff;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    #description #new-world .details-content {
+      width: 288px;
+      height: 272px;
+      text-align: center; }
+      #description #new-world .details-content h2 {
+        font: bold 16px "Microsoft Yahei"; }
+      #description #new-world .details-content span {
+        color: red; }
+      #description #new-world .details-content p {
+        text-align: left;
+        margin-top: 17px;
+        line-height: 30px; }
+      #description #new-world .details-content .more-detail {
+        display: inline-block;
+        margin-top: 36px;
+        border: 1px solid #e46868;
+        font: bold 14px "Microsoft Yahei";
+        padding: 9px 28px;
+        color: #e46868; }
+      #description #new-world .details-content .detail-banner-btn {
+        margin-top: 24px;
+        margin-left: -14px; }
+        #description #new-world .details-content .detail-banner-btn .circle {
+          width: 12px;
+          height: 12px;
+          border: 1px solid #929292;
+          border-radius: 50%;
+          display: inline-block;
+          margin-left: 14px; }
+        #description #new-world .details-content .detail-banner-btn .current {
+          background-color: #929292; }
+  #description #new-times {
+    height: 522px;
+    text-align: center; }
+    #description #new-times .new-times-item {
+      float: left;
+      width: 33.3%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #description #new-times .new-times-item h3 {
+        font: 21px/30px SimHei; }
+    #description #new-times .more-btn {
+      width: 100%;
+      line-height: 40px;
+      display: block;
+      margin-top: 41px;
+      cursor: pointer; }
+    #description #new-times .new-times-item:nth-child(1) {
+      background-color: #e74f4d;
+      color: #fff; }
+      #description #new-times .new-times-item:nth-child(1) a {
+        color: #fff;
+        border: 1px solid #fff; }
+      #description #new-times .new-times-item:nth-child(1) .short-divider {
+        width: 30px;
+        height: 2px;
+        margin-top: 20px;
+        display: inline-block;
+        background-color: #fff; }
+    #description #new-times .new-times-item:nth-child(2) {
+      position: relative; }
+      #description #new-times .new-times-item:nth-child(2) a {
+        color: #000;
+        border: 1px solid #e74f4d; }
+      #description #new-times .new-times-item:nth-child(2) .short-divider {
+        width: 30px;
+        height: 2px;
+        margin-top: 20px;
+        display: inline-block;
+        background-color: #abaaaa; }
+      #description #new-times .new-times-item:nth-child(2):after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent #fff transparent transparent;
+        border-width: 15px 25px;
+        border-color: transparent transparent transparent #fff;
+        z-index: 999;
+        right: -50px; }
+    #description #new-times .new-times-item:nth-child(3) {
+      background: url(../image/backgrounds/us.jpg) no-repeat center center;
+      background-size: cover; }
+    #description #new-times .item-wrapper {
+      width: 170px; }
+
+#community {
+  padding-top: 120px; }
+  #community .volunteer-header {
+    text-align: center; }
+    #community .volunteer-header h3 {
+      font: 21px SimHei; }
+    #community .volunteer-header .short-divider {
+      width: 30px;
+      height: 2px;
+      margin-top: 8px;
+      display: inline-block;
+      background-color: #ea695f; }
+    #community .volunteer-header p {
+      padding-top: 16px;
+      color: #aaa;
+      font-size: 12px; }
+  #community .volunteer-body {
+    width: 1000px;
+    margin: 106px auto 166px; }
+    #community .volunteer-body .declarations {
+      width: 35%;
+      padding-right: 70px;
+      box-sizing: border-box; }
+    #community .volunteer-body .declaration-item {
+      font: 12px/21px SimHei;
+      color: rgba(0, 0, 0, 0.6);
+      margin-bottom: 8px; }
+      #community .volunteer-body .declaration-item h3 {
+        font: 14px SimHei;
+        margin-bottom: 26px;
+        color: rgba(0, 0, 0, 0.8); }
+      #community .volunteer-body .declaration-item p {
+        vertical-align: top; }
+      #community .volunteer-body .declaration-item .declaration-more {
+        float: right;
+        color: rgba(0, 0, 0, 0.6); }
+        #community .volunteer-body .declaration-item .declaration-more:before {
+          content: url(../image/icons/more.png);
+          margin-right: 8px; }
+    #community .volunteer-body .applications {
+      width: 65%; }
+      #community .volunteer-body .applications .application-form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: -18px; }
+        #community .volunteer-body .applications .application-form .input-box {
+          flex: 1;
+          margin-right: 18px;
+          margin-bottom: 14px;
+          padding-left: 16px;
+          min-width: 35%;
+          font: 12px/40px SimSun;
+          background-color: #ededee; }
+        #community .volunteer-body .applications .application-form .text-area {
+          display: block;
+          flex-basis: 100%;
+          height: 120px;
+          padding-left: 16px;
+          background-color: #ededee;
+          opacity: 0.8; }
+        #community .volunteer-body .applications .application-form .submit-application {
+          display: block; }
+
+#about-us {
+  background-color: #32353e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 360px; }
+  #about-us .about-container {
+    width: 510px;
+    height: 200px;
+    text-align: center;
+    color: #fff; }
+    #about-us .about-container h3 {
+      font: 21px SimHei; }
+    #about-us .about-container p {
+      margin-top: 6px;
+      max-width: 480px;
+      font: 12px/18px SimSun; }
+    #about-us .about-container .email-box {
+      margin-top: 24px;
+      display: flex;
+      height: 40px;
+      line-height: 40px; }
+      #about-us .about-container .email-box input[type="email"] {
+        flex: 1;
+        font: 14px "Microsoft Yahei";
+        padding-left: 10px;
+        color: #aaa; }
+      #about-us .about-container .email-box input[type="submit"] {
+        padding-left: 8px;
+        width: 80px;
+        text-align: center;
+        background-color: #686166;
+        color: #fff;
+        letter-spacing: 8px; }
+    #about-us .about-container .share-links {
+      padding-top: 36px;
+      margin-left: -30px;
+      text-align: center;
+      display: inline-block; }
+      #about-us .about-container .share-links img {
+        float: left;
+        margin-left: 30px;
+        display: inline-block; }
+
+#copyright {
+  line-height: 60px;
+  height: 60px;
+  padding-left: 100px;
+  padding-right: 40px;
+  background-color: #2f3038;
+  color: #fff; }
+  #copyright a {
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
