@@ -213,35 +213,41 @@ body{
 			.selection-item{
 				flex:1;//equal the four part
 				line-height: 35px;
+				height: 35px;
 
-
-				background-color: #fff;
+				@include font(12px,"Microsoft Yahei",#a8aaaa);
+				background: url("../image/icons/arrow2.png") right 10px center no-repeat, #fff;
 				position: relative;//becauseof the absolute position of the cover,the backgournd of the input is covered,so it should be lifted.
+				cursor: pointer;
+
+				&:before{
+					content:attr(data);
+					color: #a8aaaa;
+					line-height: 35px;
+					float: left;//to make sure on the left
+				}
 			}
 			.selection-item+.selection-item{
 				margin-left: 28px;
 			}
 			.country,.province,.city{
-				border-right: 1px solid #e3d9d3;
-				border-left: 1px solid #e3d9d3;
+				// border-right: 1px solid #e3d9d3;
+				// border-left: 1px solid #e3d9d3;
 				box-sizing:border-box;
 				padding: 0 8px 0 12px;// gap between the input and the word
 
 			}
 			.submit{
-				background-color: #be4e48;
+				background: #be4e48;
 				.search-btn{
 					@include font(1em,"Microsoft Yahei",#fff);
+					line-height: 35px;
 				}
 			}
-			select{
-				width: 100%;
-				color: #a8aaaa;
-				@include font(12px,"Microsoft Yahei",#a8aaaa);
-				background: url("../image/icons/arrow2.png") no-repeat right center;
-			}
 
-			.dropdown{
+			.selection-item .dropdown{
+				display: none;
+				//visibility: hidden;ok
 				position: absolute;//attention: because it's set to absolute,the width is as wide as the content
 				top: 35px;
 				left: 0;
@@ -275,9 +281,17 @@ body{
 				}
 
 			}
-
-			.focus{
+			.selection-item:focus{
+				outline: none;
 				border: 1px solid #be4e48;
+				.dropdown{
+					display: block;
+					border: 1px solid #be4e48;
+					// visibility: visible;
+					li:hover{
+						background-color: #be4e48;
+					}
+				}
 			}
 
 

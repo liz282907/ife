@@ -155,27 +155,30 @@ body {
       #activities .activity-search .address-selection .selection-item {
         flex: 1;
         line-height: 35px;
-        background-color: #fff;
-        position: relative; }
+        height: 35px;
+        font: 12px "Microsoft Yahei";
+        color: #a8aaaa;
+        background: url("../image/icons/arrow2.png") right 10px center no-repeat, #fff;
+        position: relative;
+        cursor: pointer; }
+        #activities .activity-search .address-selection .selection-item:before {
+          content: attr(data);
+          color: #a8aaaa;
+          line-height: 35px;
+          float: left; }
       #activities .activity-search .address-selection .selection-item + .selection-item {
         margin-left: 28px; }
       #activities .activity-search .address-selection .country, #activities .activity-search .address-selection .province, #activities .activity-search .address-selection .city {
-        border-right: 1px solid #e3d9d3;
-        border-left: 1px solid #e3d9d3;
         box-sizing: border-box;
         padding: 0 8px 0 12px; }
       #activities .activity-search .address-selection .submit {
-        background-color: #be4e48; }
+        background: #be4e48; }
         #activities .activity-search .address-selection .submit .search-btn {
           font: 1em "Microsoft Yahei";
-          color: #fff; }
-      #activities .activity-search .address-selection select {
-        width: 100%;
-        color: #a8aaaa;
-        font: 12px "Microsoft Yahei";
-        color: #a8aaaa;
-        background: url("../image/icons/arrow2.png") no-repeat right center; }
-      #activities .activity-search .address-selection .dropdown {
+          color: #fff;
+          line-height: 35px; }
+      #activities .activity-search .address-selection .selection-item .dropdown {
+        display: none;
         position: absolute;
         top: 35px;
         left: 0;
@@ -183,22 +186,28 @@ body {
         text-align: left;
         background-color: #e3e3e4;
         padding-bottom: 12px; }
-        #activities .activity-search .address-selection .dropdown .dropdown-item {
+        #activities .activity-search .address-selection .selection-item .dropdown .dropdown-item {
           display: block;
           font: 12px/26px "Microsoft Yahei";
           color: #323333; }
-        #activities .activity-search .address-selection .dropdown .down-arrow {
+        #activities .activity-search .address-selection .selection-item .dropdown .down-arrow {
           margin: 0 12px 0 8px;
           visibility: hidden; }
-        #activities .activity-search .address-selection .dropdown .down-message {
+        #activities .activity-search .address-selection .selection-item .dropdown .down-message {
           margin-left: 12px; }
-        #activities .activity-search .address-selection .dropdown .select-down-item {
+        #activities .activity-search .address-selection .selection-item .dropdown .select-down-item {
           background-color: #be4e48;
           color: white; }
-          #activities .activity-search .address-selection .dropdown .select-down-item .down-arrow {
+          #activities .activity-search .address-selection .selection-item .dropdown .select-down-item .down-arrow {
             visibility: visible; }
-      #activities .activity-search .address-selection .focus {
+      #activities .activity-search .address-selection .selection-item:focus {
+        outline: none;
         border: 1px solid #be4e48; }
+        #activities .activity-search .address-selection .selection-item:focus .dropdown {
+          display: block;
+          border: 1px solid #be4e48; }
+          #activities .activity-search .address-selection .selection-item:focus .dropdown li:hover {
+            background-color: #be4e48; }
   #activities .activity-gallery {
     height: 604px;
     width: 100%;

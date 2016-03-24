@@ -65,22 +65,23 @@
                         <div class="divider"></div>
                         <p>每个城市都有不同的活动信息，请自助查询您所需要了解的城市</p>
                         <div class="address-selection">
-                            <div class="country selection-item">
-                                <select name="country">
-                                    <option value="中国">中国</option>
-                                </select>
+                            <div class="country selection-item" data="国家"tabindex="0">
+	                            <ul class="dropdown">
+                            		<li class="dropdown-item select-down-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />中国</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />美国</li>
+	                            </ul>
                             </div>
-                            <div class="province selection-item focus">
-                                <select name="province">
-                                	<option value="" disabled selected>省份</option>
-                                    <option value="北京市">北京市</option>
+                            <div class="province selection-item" tabindex="0" data="省份">
+                                <!-- <select name="province">
+                                	<option value="" disabled selected class="option">省份</option>
+                                    <option value="北京市" class="option">北京市</option>
                                     <option value="天津市">天津市</option>
                                     <option value="河北省">河北省</option>
                                     <option value="陕西省">陕西省</option>
                                     <option value="内蒙古自治区">内蒙古自治区</option>
                                     <option value="辽宁省">辽宁省</option>
-                                </select>
-                            	<ul class="dropdown focus">
+                                </select> -->
+                            	<ul class="dropdown">
                             		<li class="dropdown-item select-down-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />北京市</li>
                             		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />天津市</li>
                             		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />河北省</li>
@@ -90,12 +91,13 @@
                             	</ul>
 
                             </div>
-                            <div class="city selection-item">
-                                <select placeholder="城市" name="city">
-                                <option value="" disabled selected>城市</option>
-                                </select>
+                            <div class="city selection-item" tabindex="0" data="城市">
+                                <ul class="dropdown">
+                            		<li class="dropdown-item select-down-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />北京</li>
+                            		<li class="dropdown-item"><img src="image/icons/down-arrow.png" alt="down-arrow" class="down-arrow" />上海</li>
+	                            </ul>
                             </div>
-                            <div class="selection-item submit">
+                            <div class="selection-item submit" tabindex="0">
                                 <input type="submit" value="搜   索"  class="search-btn"/>
                             </div>
                         </div>
