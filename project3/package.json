@@ -1,0 +1,24 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "project3 王牌特工 via es6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liz282907/ife.git"
+  },
+  "keywords": [
+    "ife",
+    "project3",
+    "es6"
+  ],
+  "author": "luchen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liz282907/ife/issues"
+  },
+  "homepage": "https://github.com/liz282907/ife#readme"
+}

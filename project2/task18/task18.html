@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task18</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+      button{
+        border: none;
+        background: none;
+        border:1px solid #03A9F4;
+        border-radius: 3px;
+        cursor: pointer;
+
+        font-family: "Microsoft Yahei";
+      }
+      button:hover{
+        background: #03A9F4;
+        color:#fff;
+        border: 1px solid #03A9F4;
+      }
+      .form-control{
+        display: inline-block;
+      }
+      .tag-container{
+        margin-top: 30px;
+        /*display: flex;*/
+        flex-wrap:wrap;
+        width: 300px;
+      }
+      .tag{
+        background-color: #03A9F4;
+        color:#fff;
+        padding: 4px 7px;
+        margin-left: 10px;
+        /*flex:1;*/
+        min-width: 10px;
+      }
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" id="queue-input"/>
+    <div class="form-control enter">
+        <button class="enter-left">左侧入</button>
+        <button class="enter-right">右侧入</button>
+    </div>
+    <div class="form-control item-exit">
+      <button class="exit-left">左侧出</button>
+      <button class="exit-right">右侧出</button>
+    </div>
+    <div class="tag-container"></div>
+  </div>
+<script src="./task18.js"></script>
+</body>
+</html>

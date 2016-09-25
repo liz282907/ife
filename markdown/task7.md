@@ -50,6 +50,19 @@
 10. 伪元素的content
 content:attr(data)
 
+11.background 属性 类padding-right属性（css）
+right 10px center
+
+12.当hover的时候，背景从下往上slide-up
+```
+box-shadow:inset x-offset y-offset blur-radius spread-radius color
+&:hover{
+        box-shadow:inset 0 -100px 0 0 #e74f4d;
+        a{color: #fff};
+        transition: all 800ms;
+        -webkit-transition:all 800ms;
+    }
+```
 #####part3 问题
 1. font-family不继承
 2. p 换行，max-width
