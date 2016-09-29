@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task19</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+      label,button,input{
+        font-family: "Microsoft Yahei";
+        font-size: 14px;
+      }
+      button{
+        border: none;
+        background: none;
+        border:1px solid #03A9F4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover{
+        background: #03A9F4;
+        color:#fff;
+        border: 1px solid #03A9F4;
+      }
+      .form-control{
+        padding: 10px;
+        display: inline-block;
+      }
+
+/*      .divider{
+        margin-top: 10px;
+      }*/
+
+      .tag-container{
+        margin-top: 30px;
+        /*display: flex;*/
+        /*flex-wrap:wrap;*/
+        /*width: 300px;*/
+      }
+      .tag-container span{
+        background-color: #03A9F4;
+        color:#fff;
+        padding: 4px 7px;
+        margin-left: 10px;
+        /*flex:1;*/
+        min-width: 10px;
+        display: inline-block;
+      }
+      .tag-container .green{
+        background-color: #36CE4E;
+      }
+      .tag-container .red{
+        background-color: #F75A80;
+      }
+
+
+  </style>
+</head>
+<body>
+  <div>
+
+    <div>
+      <input type="number" id="queue-input" min=10 max=100/>
+      <div class="form-control enter">
+          <button class="enter-left">左侧入</button>
+          <button class="enter-right">右侧入</button>
+      </div>
+      <div class="form-control item-exit">
+        <button class="exit-left">左侧出</button>
+        <button class="exit-right">右侧出</button>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+    <div>
+        <div class="form-control">
+            <label>动画速度</label>
+             <input type="number" value="150" class="input-interval" />
+             <button class="btn-pause">暂停</button>
+             <button class="btn-resume">继续</button>
+        </div>
+        <div class="form-control item-sort">
+            <button class="random-queue">pick some!</button>
+            <button class="sort-bubble">冒泡排序</button>
+        </div>
+
+    </div>
+    <div class="tag-container"></div>
+  </div>
+<script src="./task19.js"></script>
+</body>
+</html>
