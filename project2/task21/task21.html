@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>task21</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+      label,button,input{
+        font-size: 14px;
+        font-family: "Microsoft Yahei"
+      }
+      button{
+        border: none;
+        background: none;
+        border:1px solid #03A9F4;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover{
+        background: #03A9F4;
+        color:#fff;
+        border: 1px solid #03A9F4;
+      }
+
+      .queue-part{
+        padding: 30px;
+      }
+
+      .container{
+        margin-top: 30px;
+        /*display: flex;*/
+        flex-wrap:wrap;
+        width: 300px;
+      }
+      .container span{
+        background-color: #03A9F4;
+        color:#fff;
+        padding: 4px 7px;
+        margin-left: 10px;
+        /*flex:1;*/
+        min-width: 10px;
+      }
+      .container .highlight{
+        background-color: red;
+        color: #fff;
+      }
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="queue-part">
+      <label>Tag:</label>
+      <input type="text" class="queue-tag" />
+      <div class="container tag-container"></div>
+    </div>
+    <div class="queue-part">
+      <textarea id="queue-interest" cols="50" rows="10"></textarea>
+      <button class="btn-query">确认兴趣爱好</button>
+      <div class="container interest-container"></div>
+    </div>
+
+
+  </div>
+<script src="./task21.js"></script>
+</body>
+</html>
