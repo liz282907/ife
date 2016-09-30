@@ -109,7 +109,7 @@ MockQueue.prototype = {
 */
   $(".tag-container").addEventListener("click",function(e){
     var target = e.target;
-    if(target.className==='tag'){
+    if(e.currentTarget.className ==='tag-container'){
       var curIndex = target.dataset.index;
       testQueue.removeTarget(curIndex);
     }
